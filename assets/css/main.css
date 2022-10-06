@@ -1,0 +1,63 @@
+@charset "utf-8";
+
+
+body {
+    background: linear-gradient(to right, #fc7eda, #b24af2);
+    overflow: hidden;
+    font-family: 'Source Code Pro';
+}
+
+input {
+    font-size: 16px;
+    font-family: 'Source Code Pro';
+    border: 0;
+    background: none;
+    outline: 0;
+    margin: 8px 0;
+    padding: 3px;
+    border-bottom: 1px solid #fff;
+    width: 100%;
+}
+
+span {
+    color: #fff;
+}
+
+.box {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 400px;
+    padding: 40px;
+    background: rgba(251, 251, 251, 0.281);
+    box-sizing: border-box;
+    box-shadow: 0 15px 20px rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+}
+
+.ap {
+    text-align: left;
+    justify-content: center;
+}
+
+.title {
+    font-size: 35px;
+    position: relative;
+    top: -10px
+}
+
+.login {
+    background: #e4e3e55b;
+    border: 0;
+    border-radius: 5px;
+    font-size: 15px;
+    float: right;
+    padding: 5px 10px;
+    position: relative;
+    top: 10px
+}
+
+button {
+    cursor: pointer;
+}
