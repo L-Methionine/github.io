@@ -4,7 +4,6 @@
 body {
     background: linear-gradient(to right, #fc7eda, #b24af2);
     overflow: hidden;
-    font-family: 'Source Code Pro';
 }
 
 input {
