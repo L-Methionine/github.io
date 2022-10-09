@@ -1,7 +1,7 @@
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url(https://acdn.moeyy.cn/jsdelivr/gh/Fuukei/Sakurairo_Vision@2.4/basic/wave1.png) repeat-x;
+    background: url(/img/wave1.png) repeat-x;
 
     position: absolute;
     bottom: 0;
@@ -19,7 +19,7 @@
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url(https://acdn.moeyy.cn/jsdelivr/gh/Fuukei/Sakurairo_Vision@2.4/basic/wave2.png) repeat-x;
+    background: url(/img/wave2.png) repeat-x;
 
     position: absolute;
     bottom: 0;
