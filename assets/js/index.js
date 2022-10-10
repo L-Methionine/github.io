@@ -3,7 +3,7 @@ var obtn = document.getElementById('btn');
 var btncontainer = document.getElementById('btn-container');
 
 function Tosearch() {
-    window.location.href = "http://www.baidu.com/s?wd=" + osearch.value;
+    window.open("http://www.baidu.com/s?wd=" + osearch.value);
 }
 
 obtn.onclick = function () {
