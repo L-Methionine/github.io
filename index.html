@@ -3,67 +3,88 @@
     <head>
         <meta charset="utf-8">
         <title>Blog</title>
-        <link rel="stylesheet" href="./assets/css/font.css">
-        <link rel="stylesheet" href="./assets/css/index.css">
-        <link rel="stylesheet" href="./assets/css/wave.css">
+        <link rel="stylesheet" type="text/css" href="./assets/css/index.css">
+        <link rel="shortcut icon" href="./img/favicon.png">
+        <link rel="stylesheet" type="text/css" href="./assets/css/wave.css">
+        <link rel="stylesheet" type="text/css" media="screen" href="https://cdn.staticfile.org/ionicons/2.0.1/css/ionicons.min.css">
     </head>
 
     <body>
         <div class="container">
-            <div class="header">
-                <div class="pic">
-                </div>
-                <div class="title">
-                    <span class="logo2">Methionine</span>
-                </div>
-                <div class="search">
-                    <input id="kw" type="text" placeholder="Search">
-                    <div id="btn-container">
-                        <div id="btn">
-                            
-                        </div>
+            <div class="scrollbar" id="bar">
+            </div>
+            <header class="safari">
+                <div class="sa-background"></div>
+                <div class="wrapper">
+                    <ul class="navigation-list ul-reset">
+                        <li class="navigation-item ib">
+                            <a href="#" class="navigation-link">
+                                关于
+                            </a>
+                        </li>
+                        <li class="navigation-item ib">
+                            <a href="#" class="navigation-link">
+                                FAQ
+                            </a>
+                        </li>
+                        <li class="navigation-item ib">
+                            <a href="#" class="navigation-link">
+                                更多
+                            </a>
+                        </li>
+                        <li class="navigation-item ib">
+                            <a href="./Basketball.html" class="navigation-link" target="_blank">
+                                应用
+                            </a>
+                        </li>
+                        <li class="navigation-item ib">
+                            <a href="#" class="navigation-link">
+                                首页
+                            </a>
+                        </li>
+                    </ul>
                     </div>
-                </div>
-                <div class="safari">
-                    <div class="logo"></div>
-                    <div class="wrapper">
-                        <ul class="navigation-list ul-reset">
-                            <li class="navigation-item ib">
-                                <a href="#" class="navigation-link">
-                                    关于
-                                </a>
-                            </li>
-                            <li class="navigation-item ib">
-                                <a href="#" class="navigation-link">
-                                    FAQ
-                                </a>
-                            </li>
-                            <li class="navigation-item ib">
-                                <a href="#" class="navigation-link">
-                                    更多
-                                </a>
-                            </li>
-                            <li class="navigation-item ib">
-                                <a href="./Basketball.html" class="navigation-link" target="_blank">
-                                    应用
-                                </a>
-                            </li>
-                            <li class="navigation-item ib">
-                                <a href="#" class="navigation-link">
-                                    首页
-                                </a>
-                            </li>
-                        </ul>
-                        </div>
 
+            </header>
+
+            <div class="main-container">
+                <div class="header">
+                    <div class="pic">
                     </div>
-                <div id="banner_wave_1"></div>
-                <div id="banner_wave_2"></div>
+                    <div class="title">
+                        <span class="logo2 no-select">Methionine</span>
+                    </div>
+                    <div class="search">
+                        <input id="kw" type="text" placeholder="Search">
+                        <div id="btn-container">
+                            <div id="btn">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <div class="top-items">
+                        <ul>
+                            <li id="img_back"><i class="ion-chevron-left"></i></li>
+                            <li id="WeChat"><i class="ion-chatbubbles"></i></li>
+                            <li id="img_forward"><i class="ion-chevron-right"></i></li>
+                        </ul>
+                    </div>
+
+                    <div id="banner_wave_1"></div>
+                    <div id="banner_wave_2"></div>
+                </div>
+
+                <section id="one">
+                    <div class="content">
+                        <p>这块区域用来放文章</p>
+                    </div>
+                </section>
             </div>
 
         </div>
 
 
         <script src="./assets/js/index.js"></script>
+        <script src="./assets/js/scroll.js"></script>
     </body>
 </html>
