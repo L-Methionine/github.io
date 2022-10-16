@@ -3,14 +3,17 @@ var obtn = document.getElementById('btn');
 var btncontainer = document.getElementById('btn-container');
 var safari = document.querySelector('.safari');
 var scrollbar = document.querySelector('#bar');
-var img0_url = './img/gs1.jpg';
-var img1_url = './img/R&Y.png';
 var img_control_forward = document.querySelector('#img_forward');
 var img_control_back = document.querySelector('#img_back');
-var lst_img = [img0_url, img1_url];
+var lst_img = [];
 
-
-
+window.onload = function () {
+    top_images = document.getElementsByClassName('topimg');
+    for (var i = 0; i < top_images.length; i++) {
+        lst_img.push(top_images[i].src);
+        console.log(top_images[i].src);
+    }
+}
 
 function Tosearch() {
     window.open("http://www.baidu.com/s?wd=" + osearch.value);
@@ -49,11 +52,13 @@ window.onscroll = function () {
     scrollbar.setAttribute('style', 'width: ' + position + '%');
 }
 
-var index = 1;
+var index = 0;
 
+/* 切换src方法 但是无动画效果
 img_control_forward.onclick = function () {
-    console.log(document.getElementsByClassName('pic')[0].style.cssText);
-    document.getElementsByClassName('pic')[0].style.cssText = `background: url(${lst_img[index]}) center center no-repeat; background-size: cover;`;
+    console.log(document.getElementById('img-1').src);
+    top_img = document.getElementById('img-1');
+    top_img.src = lst_img[index];
     index++;
     if (index == lst_img.length) {
         index = 0;
@@ -61,10 +66,39 @@ img_control_forward.onclick = function () {
 }
 
 img_control_back.onclick = function () {
-    console.log(document.getElementsByClassName('pic')[0].style.cssText);
-    document.getElementsByClassName('pic')[0].style.cssText = `background: url(${lst_img[index]}) center center no-repeat; background-size: cover;`;
+    console.log(document.getElementById('img-1').src);
+    document.getElementById('img-1').src = lst_img[index];
     index--;
     if (index == -1) {
         index = lst_img.length - 1;
+    }
+}
+*/
+
+// 修改图片透明度方法
+img_control_forward.onclick = function () {
+    top_img = document.getElementById('img-' + index);
+    top_img.style.filter = 'brightness(0.8) opacity(0)';
+    index++;
+    console.log(index);
+    if (index == lst_img.length) {
+        index = 0;
+        for (var i = 0; i < lst_img.length; i++) {
+            document.getElementById('img-' + i).style.filter = 'brightness(0.8) opacity(1)';
+        }
+    }
+}
+
+img_control_back.onclick = function () {
+    top_img = document.getElementById('img-' + index);
+    index--;
+    console.log(index);
+    if (index == -1) {
+        index = lst_img.length - 1;
+        for (var i = 0; i < lst_img.length-1; i++) {
+            document.getElementById('img-' + i).style.filter = 'brightness(0.8) opacity(0)';
+        };
+    }else{
+        document.getElementById('img-' + index).style.cssText = null;
     }
 }
