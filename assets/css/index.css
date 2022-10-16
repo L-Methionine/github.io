@@ -310,6 +310,7 @@ body::-webkit-scrollbar-thumb {
     justify-content: center;
     align-items: center;
     cursor: pointer;
+    transition: .2s ease-in-out;
 }
 
 .top-items ul li i {
@@ -319,6 +320,23 @@ body::-webkit-scrollbar-thumb {
     font-size: 20px;
     padding: 3px;
 
+}
+
+#img_back i:before {
+    font-weight: 1000;
+}
+
+#img_forward i:before {
+    font-weight: 1000;
+}
+
+.top-items ul li:hover {
+    background: #f9b907;
+    border-color: #f9b907;
+}
+
+.top-items ul li:hover i {
+    color: #fff;
 }
 
 .content {
