@@ -7,6 +7,10 @@ body {
     font-family: "Source Code Pro";
 }
 
+p {
+    line-height: 1.5em;
+}
+
 .no-select {
     user-select: none;
 }
@@ -97,7 +101,7 @@ body {
 
 .navigation-item a {
     text-decoration: none;
-    color: rgb(223, 202, 37);
+    color: #f9b907;
 
 }
 
@@ -230,9 +234,9 @@ body {
 .navigation-link {
     display: block;
     position: relative;
-    padding: 5px 20px;
+    padding: 5px 15px;
     text-decoration: none;
-    color: rgb(243, 171, 47);
+    color: #f9b907;
     -webkit-transition: color .2s ease-in-out;
     transition: color .2s ease-in-out;
     height: 35px;
@@ -264,7 +268,42 @@ body {
     width: 100%;
 }
 
-#one {
+li.navigation-item:nth-child(1) i:after {
+    content: "关于";
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+li.navigation-item:nth-child(2) i:after {
+    content: "帮助";
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+li.navigation-item:nth-child(3) i:after {
+    content: "更多";
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+li.navigation-item:nth-child(4) i:after {
+    content: "应用";
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+li.navigation-item:nth-child(5) i:after {
+    content: "首页";
+    font-style: normal;
+    font-weight: 600;
+    margin: 0 5px;
+}
+
+#section-1 {
     display: flex;
     justify-content: center;
 }
@@ -319,7 +358,6 @@ body::-webkit-scrollbar-thumb {
     text-decoration: none;
     font-size: 20px;
     padding: 3px;
-
 }
 
 #img_back i:before {
@@ -343,8 +381,47 @@ body::-webkit-scrollbar-thumb {
     width: 50%;
     position: relative;
     background-color: rgb(105, 103, 103);
-    padding: 40px;
+    padding: 60px 40px;
     height: 800px;
     display: flex;
     justify-content: center;
+}
+
+.article-container {
+    position: relative;
+    background: #fff;
+    border-radius: 15px;
+    padding: 15px;
+    height: 250px;
+    width: 80%;
+    overflow: hidden;
+    display: flex;
+}
+
+.article-content {
+    position: relative;
+    display: inline-block;
+    width: 50%;
+
+}
+
+.article-title {
+    margin: 10px;
+    display: flex;
+    justify-content: center;
+}
+
+.article-img {
+    position: absolute;
+    display: inline-block;
+    height: 85%;
+    overflow: hidden;
+    top: 50%;
+    left: 58%;
+    transform: translateY(-50%);
+}
+
+.article-img > img {
+    height: 100%;
+    width: auto;
 }
