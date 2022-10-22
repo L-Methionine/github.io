@@ -7,6 +7,7 @@ var img_control_forward = document.querySelector('#img_forward');
 var img_control_back = document.querySelector('#img_back');
 var lst_img = [];
 
+//预处理图片
 window.onload = function () {
     top_images = document.getElementsByClassName('topimg');
     for (var i = 0; i < top_images.length; i++) {
@@ -25,6 +26,10 @@ obtn.onclick = function () {
 
 btncontainer.onclick = function () {
     Tosearch();
+}
+
+document.getElementById('e-Mail').onclick = function() {
+    window.alert('My E-Mail : Zinc_Chloride@outlook.com')
 }
 
 window.onscroll = function () {
@@ -75,9 +80,8 @@ img_control_back.onclick = function () {
 }
 */
 
-// 修改图片透明度方法
-img_control_forward.onclick = function () {
-    top_img = document.getElementById('img-' + index);
+function img_forward() {
+    let top_img = document.getElementById('img-' + index);
     top_img.style.filter = 'brightness(0.8) opacity(0)';
     index++;
     console.log(index);
@@ -89,8 +93,13 @@ img_control_forward.onclick = function () {
     }
 }
 
-img_control_back.onclick = function () {
-    top_img = document.getElementById('img-' + index);
+setInterval(img_forward, 5000); // 每过一段时间就会自动切换图片
+
+// 修改图片透明度方法
+img_control_forward.onclick = img_forward;  // 图片向前切换
+
+
+img_control_back.onclick = function () {    // 图片向后切换
     index--;
     console.log(index);
     if (index == -1) {
