@@ -1,6 +1,6 @@
-var osearch = document.getElementById('kw');
-var obtn = document.getElementById('btn');
-var btncontainer = document.getElementById('btn-container');
+//var osearch = document.getElementById('kw');
+//var obtn = document.getElementById('btn');
+//var btncontainer = document.getElementById('btn-container');
 var safari = document.querySelector('.safari');
 var scrollbar = document.querySelector('#bar');
 var img_control_forward = document.querySelector('#img_forward');
@@ -16,6 +16,7 @@ window.onload = function () {
     }
 }
 
+/*
 function Tosearch() {
     window.open("http://www.baidu.com/s?wd=" + osearch.value);
 }
@@ -27,6 +28,7 @@ obtn.onclick = function () {
 btncontainer.onclick = function () {
     Tosearch();
 }
+*/
 
 document.getElementById('e-Mail').onclick = function() {
     window.alert('My E-Mail : Zinc_Chloride@outlook.com')
