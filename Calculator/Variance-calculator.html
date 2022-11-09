@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>计算器</title>
+        <!-- 引入样式 -->
+        <link rel="stylesheet" href="../assets/css/element-ui.css">
+        <link rel="stylesheet" type="text/css" href="./vc.css">
+    </head>
+    <body>
+        <div class="container">
+            <div class="calculator-box">
+                <div id="c-head">
+                    <div class="useful-number">
+                        <p>数据长度</p>
+                        <template>
+                            <el-input-number v-model="useful_length" :min="1" :max="10" label="6"></el-input-number>
+                        </template>
+                    </div>
+                    <div class="number-list">
+                        <p>数据组数</p>
+                        <template class="data-list">
+                            <el-input-number v-model="num" :min="2" :max="15" label="描述文字"></el-input-number>
+                        </template>
+                    </div>
+                </div>
+
+                <div id="datas">
+                    <div v-for="(item, index) in data_num" class="el-input-container">
+                        <el-input
+                        :id = "'data' + index" 
+                        type="text"
+                        placeholder="请输入内容"
+                        v-model="data_num[index]"
+                        :maxlength="useful_length"
+                        show-word-limit
+                        >
+                        </el-input>
+                    </div>
+                </div>
+                <table class="output">
+                    <tbody>
+                        <tr>
+                            <td>平均数</td>
+                            <td>{{Average}}</td>
+                        </tr>
+                        <tr>
+                            <td>样本标准偏差</td>
+                            <td>{{Sample_Standard_Deviation}}</td>
+                        </tr>
+                        <tr>
+                            <td>样本方差</td>
+                            <td>{{Sample_Variance}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+        <script src="../assets/js/vue.js"></script>
+        <script src="../assets/js/element-ui.js"></script>
+        <script src="./vc.js"></script>
+    </body>
+</html>

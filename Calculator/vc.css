@@ -1,0 +1,74 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.calculator-box {
+    position: relative;
+    height: 700px;
+    width: 500px;
+    padding: 10px;
+    background: rgb(227, 222, 222);
+    border-radius: 10px;
+    overflow-x: hidden;
+    box-shadow: 0 15px 15px rgba(0, 0, 0, 0.5);
+}
+
+#c-head {
+    position:relative;
+    display: flex;
+    justify-content: space-around;
+    padding: 10px;
+}
+
+.useful-number {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    width: 180px;
+}
+
+.useful-number > template {
+    width: 100%;
+}
+
+.number-list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 180px;
+}
+
+.number-list > template {
+    width: 100%;
+}
+
+.el-input-container {
+    margin: 10px;
+}
+
+.output {
+    width: 95%;
+    margin: 10px;
+}
+
+.output td:nth-child(2) {
+    position: relative;
+    padding: 5px;
+    border-radius: 10px;
+    width: 70%;
+    text-align: center;
+    background: #fff;
+}
+
+.output {
+    border-collapse: separate;
+    border-spacing: 0 10px;
+}
