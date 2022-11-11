@@ -114,8 +114,10 @@ img_control_back.onclick = function () {    // 图片向后切换
     }
 }
 
+/*
 let article_1 = document.getElementById('article-1');
 
 article_1.onclick = function () {
     window.open('https://mp.weixin.qq.com/s/eIoreVGjHz0aXn7jC_FP2w');
 }
+*/

@@ -29,7 +29,7 @@
                             </a>
                         </li>
                         <li class="navigation-item ib">
-                            <a href="./Calculator/Variance-calculator.html" class="navigation-link" target="_blank">
+                            <a href="./images/zhx.jpg" class="navigation-link" target="_blank">
                                 <i class="ion-more"></i>
                             </a>
                         </li>
@@ -49,12 +49,9 @@
             </header>
 
             <div class="main-container">
-                <div class="header">
+                <div id="header">
                     <div class="pic">
-                        <img id="img-0"  class="topimg" src="./images/Nahida.png" alt="pic">
-                        <img id="img-1" class="topimg" src="./images/R&Y.png" alt="pic">
-                        <img id="img-2" class="topimg" src="./images/SS.jpg" alt="pic">
-                        <img id="img-3" class="topimg" src="./images/Arck.jpg" alt="pic">
+                        <img v-for="imageItem in imageList" :id="imageItem.id" class="topimg" :src="imageItem.src" :key="id" alt="pic">
                     </div>
                     <div class="title">
                         <span class="logo2 no-select">Methionine</span>
@@ -84,15 +81,21 @@
 
                 <section id="section-1">
                     <div class="content">
-                        <div id="article-1" class="article-container">
+                        <div v-for="(item,index) in ArticleList" 
+                        class="article-container" 
+                        :id="'article-'+id" 
+                        :key="item.id" 
+                        @click="navigativeTo(index)" 
+                        :style="{flexDirection:index%2===0?'row':'row-reverse'}"
+                        >
                             <div class="article-content">
-                                <div class="article-title"><h2>[Python]使用Selenium爬取网易云音乐排行榜</h2></div>
+                                <div class="article-title"><h2>{{item.title}}</h2></div>
                                 <div class="srticle-text">
-                                    <p>This is an article text.Here's an overview of this article</p>
+                                    <p>{{item.overview}}</p>
                                 </div>
                             </div>
                             <div class="article-img">
-                                <img src="./images/img1.jpg" alt="Network error" />
+                                <img :src="item.image" alt="Error" />
                             </div>
                         </div>
                     </div>
@@ -101,6 +104,8 @@
 
         </div>
 
+        <script src="./assets/js/vue.js"></script>
+        <script src="./assets/js/index_vue.js"></script>
         <script src="./assets/js/index.js"></script>
         <script src="./assets/js/scroll.js"></script>
     </body>
