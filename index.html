@@ -51,7 +51,7 @@
             <div class="main-container">
                 <div id="header">
                     <div class="pic">
-                        <img v-for="imageItem in imageList" :id="imageItem.id" class="topimg" :src="imageItem.src" :key="id" alt="pic">
+                        <img v-for="imageItem in imageList" :id="imageItem.id" class="topimg" :src="imageItem.src" :key="imageItem.id" alt="pic">
                     </div>
                     <div class="title">
                         <span class="logo2 no-select">Methionine</span>
@@ -83,7 +83,7 @@
                     <div class="content">
                         <div v-for="(item,index) in ArticleList" 
                         class="article-container" 
-                        :id="'article-'+id" 
+                        :id="'article-'+item.id" 
                         :key="item.id" 
                         @click="navigativeTo(index)" 
                         :style="{flexDirection:index%2===0?'row':'row-reverse'}"
@@ -104,7 +104,7 @@
 
         </div>
 
-        <script src="./assets/js/vue.js"></script>
+        <script src="./assets/js/vue.min.js"></script>
         <script src="./assets/js/index_vue.js"></script>
         <script src="./assets/js/index.js"></script>
         <script src="./assets/js/scroll.js"></script>
