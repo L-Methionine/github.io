@@ -12,8 +12,8 @@
 
 .calculator-box {
     position: relative;
-    height: 700px;
-    width: 500px;
+    height: 80%;
+    width: auto;
     padding: 10px;
     background: rgb(227, 222, 222);
     border-radius: 10px;
@@ -28,11 +28,15 @@
     padding: 10px;
 }
 
+#c-head > div {
+    margin: 10px;
+}
+
 .useful-number {
     display: flex;
-    justify-content: center;
     flex-wrap: wrap;
-    width: 180px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .useful-number > template {
@@ -42,8 +46,8 @@
 .number-list {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
-    width: 180px;
+    flex-direction: column;
+    align-items: center;
 }
 
 .number-list > template {
