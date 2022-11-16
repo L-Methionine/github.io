@@ -396,6 +396,22 @@ body::-webkit-scrollbar-thumb {
     padding: 3px;
 }
 
+#CloudMusic svg{
+    position: relative;
+    width: 65%;
+    height: 65%;
+    fill: #f9b907;
+}
+
+#CloudMusic a {
+    display: flex;
+    justify-content: center;
+}
+
+#CloudMusic svg:hover {
+    fill: #fff;
+}
+
 #img_back i:before {
     font-weight: 1000;
 }
