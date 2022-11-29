@@ -4,7 +4,7 @@ const vm = new Vue({
         return {
             imageList: [
                 {id: 'img-0', src: './images/Nahida.png'},
-                {id: 'img-1', src: './images/R&Y.png'},
+                {id: 'img-1', src: './images/Nahida2.jpg'},
                 {id: 'img-2', src: './images/SS.jpg'},
                 {id: 'img-3', src: './images/Arck.jpg'}
             ],

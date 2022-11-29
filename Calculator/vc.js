@@ -6,33 +6,54 @@ const root = new Vue({
             input1: 1,
             num: 2,
             useful_length: 1,
+            real_useful_length: 1,
             data_num: ['',''],
         }
     },
     methods: {
         switch_to_next(e){
-            console.log(e.target);
+            console.log("success")
+            input__innerId = + e.target.id.slice(4,5)
+            if(document.getElementById('data'+(input__innerId+1))){
+                document.getElementById('data'+(input__innerId+1)).focus()
+            }
+        },
+        defineRealUsefulLength(e){
+            console.log("success")
+            if(e.target.value.indexOf('.') != -1){
+                this.real_useful_length = this.useful_length + 1
+            }else{
+                this.real_useful_length = this.useful_length
+            }
         }
     },
     watch: {
         num:{
             handler: function(newVal, oldVal){
                 if(newVal > oldVal){
-                    this.data_num.push('');
+                    for(i = 2;i < this.num; i++){
+                        this.data_num[i] = ''
+                    }
                 }else{
-                    this.data_num.pop();
+                    this.data_num = this.data_num.slice(0, this.num)
                 }
             }
         },
         data_num:{
             handler: function(){
                 for(i = 0; i < this.data_num.length; i++){
-                    if (this.data_num[i].length == this.useful_length){
+                    if (this.data_num[i].length == this.real_useful_length){
                         if (document.getElementById('data'+(i+1))){
                             document.getElementById('data'+(i+1)).focus();
                         }
                     }
                 }
+            },
+            deep: true
+        },
+        useful_length:{
+            handler: function(){
+                return this.real_useful_length = this.useful_length
             }
         }
     },
