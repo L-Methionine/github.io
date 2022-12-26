@@ -1,10 +1,25 @@
+const top_vm = new Vue({
+    el: '.safari',
+    data: function() {
+        return {
+            navigationList: [
+                {id: 'nav-1', url: '#', icon: 'ion-information-circled'},
+                {id: 'nav-2', url: '#', icon: 'ion-help-circled'},
+                {id: 'nav-3', url: './Calculator/Variance-calculator.html', icon: 'ion-more'},
+                {id: 'nav-4', url: './Basketball.html', icon: 'ion-cube'},
+                {id: 'nav-5', url: '#', icon: 'ion-ios-home'},
+            ]
+        }
+    }
+});
+
 const vm = new Vue({
     el: '#header',
     data: function() {
         return {
             imageList: [
                 {id: 'img-0', src: './images/Nahida.png'},
-                {id: 'img-1', src: './images/Nahida2.jpg'},
+                {id: 'img-1', src: './images/B&N2.png'},
                 {id: 'img-2', src: './images/SS.jpg'},
                 {id: 'img-3', src: './images/Arck.jpg'}
             ],

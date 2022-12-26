@@ -83,14 +83,13 @@ img_control_back.onclick = function () {
 */
 
 function img_forward() {
-    let top_img = document.getElementById('img-' + index);
-    top_img.style.filter = 'brightness(0.8) opacity(0)';
+    top_images[index].style.filter = 'brightness(0.8) opacity(0)';
     index++;
     console.log(index);
     if (index == lst_img.length) {
         index = 0;
         for (var i = 0; i < lst_img.length; i++) {
-            document.getElementById('img-' + i).style.filter = 'brightness(0.8) opacity(1)';
+            top_images[i].style.filter = 'brightness(0.8) opacity(1)';
         }
     }
 }
@@ -100,17 +99,16 @@ setInterval(img_forward, 5000); // 每过一段时间就会自动切换图片
 // 修改图片透明度方法
 img_control_forward.onclick = img_forward;  // 图片向前切换
 
-
 img_control_back.onclick = function () {    // 图片向后切换
     index--;
     console.log(index);
     if (index == -1) {
         index = lst_img.length - 1;
         for (var i = 0; i < lst_img.length-1; i++) {
-            document.getElementById('img-' + i).style.filter = 'brightness(0.8) opacity(0)';
+            top_images[i].style.filter = 'brightness(0.8) opacity(0)';
         };
     }else{
-        document.getElementById('img-' + index).style.cssText = null;
+        top_images[index].style.cssText = null;
     }
 }
 

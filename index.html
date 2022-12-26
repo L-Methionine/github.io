@@ -19,11 +19,12 @@
                 <div class="sa-background"></div>
                 <div class="wrapper">
                     <ul class="navigation-list ul-reset">
-                        <li class="navigation-item ib">
-                            <a href="#" class="navigation-link">
-                                <i class="ion-information-circled"></i>
+                        <li v-for="navItem in navigationList" :key="navItem.id" class="navigation-item ib">
+                            <a :href="navItem.url" class="navigation-link" target="_blank">
+                                <i :class="navItem.icon"></i>
                             </a>
                         </li>
+                        <!--
                         <li class="navigation-item ib">
                             <a href="#" class="navigation-link">
                                 <i class="ion-help-circled"></i>
@@ -44,6 +45,7 @@
                                 <i class="ion-ios-home"></i>
                             </a>
                         </li>
+                        -->
                     </ul>
                     </div>
 
@@ -52,7 +54,12 @@
             <div class="main-container">
                 <div id="header">
                     <div class="pic">
-                        <img v-for="imageItem in imageList" :id="imageItem.id" class="topimg" :src="imageItem.src" :key="imageItem.id" alt="pic">
+                        <img v-for="(imageItem,index) in imageList"
+                         :id="imageItem.id" class="topimg"
+                         :src="imageItem.src"
+                         :key="imageItem.id"
+                         :style="{position: 'absolute',zIndex: -1-index}"
+                         alt="pic">
                     </div>
                     <div class="title">
                         <span class="logo2 no-select">Methionine</span>
