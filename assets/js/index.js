@@ -1,7 +1,7 @@
 //var osearch = document.getElementById('kw');
 //var obtn = document.getElementById('btn');
 //var btncontainer = document.getElementById('btn-container');
-var safari = document.querySelector('.safari');
+var navBar = document.querySelector('.navigation-bar');
 var scrollbar = document.querySelector('#bar');
 var img_control_forward = document.querySelector('#img_forward');
 var img_control_back = document.querySelector('#img_back');
@@ -38,10 +38,10 @@ window.onscroll = function () {
     var sctop=document.documentElement.scrollTop;//获取滚动条高度
 
     if(sctop>=10){//如果高度大于10px则显示回到顶部按钮
-        safari.style.background="rgba(255, 255, 255, 0.85)";//显示按钮
+        navBar.style.background="rgba(255, 255, 255, 0.85)";//显示按钮
     }
     else{
-        safari.removeAttribute("style");//隐藏按钮
+        navBar.removeAttribute("style");//隐藏按钮
     }
 
     // Progress bar

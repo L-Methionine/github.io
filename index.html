@@ -15,8 +15,7 @@
         <div class="container">
             <div class="scrollbar" id="bar">
             </div>
-            <header class="safari">
-                <div class="sa-background"></div>
+            <header class="navigation-bar">
                 <div class="wrapper">
                     <ul class="navigation-list ul-reset">
                         <li v-for="navItem in navigationList" :key="navItem.id" class="navigation-item ib">
@@ -122,6 +121,38 @@
                                 <img :src="item.image" alt="Error" />
                             </div>
                         </div>
+                    </div>
+                    <div class="sidebar">
+                        <div id="profile">
+                            <div id="avatar">
+                                <img src="./images/img1.jpg" alt="Error" />
+                                <p style="text-align: center;">Methionine</p>
+                            </div>
+                            <div id="data-bar">
+                                <div id="article-count">
+                                    <p>Article</p>
+                                    <p>{{ArticleList.length}}</p>
+                                </div>
+                                <div id="tag-count">
+                                    <p>Tag</p>
+                                    <p></p>
+                                </div>
+                                <div id="category-count">
+                                    <p>Category</p>
+                                    <p></p>
+                                </div>
+                            </div>
+                            <div id="followMe">
+
+                            </div>
+                        </div>
+                        <div id="announcement">
+                            <div class="announcement-title">
+                                <h3>Announcement</h3>
+                            </div>
+                            <div class="announcement-content">
+                                <p>This is my Blog</p>
+                            </div>
                     </div>
                 </section>
             </div>

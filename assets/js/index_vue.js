@@ -1,5 +1,5 @@
 const top_vm = new Vue({
-    el: '.safari',
+    el: '.navigation-bar',
     data: function() {
         return {
             navigationList: [
@@ -28,7 +28,9 @@ const vm = new Vue({
         }
     },
     methods: {
+        imageforward: function() {
 
+        }
     },
     computed: {
 
@@ -48,7 +50,7 @@ const section1 = new Vue({
                     title: '[Python]使用Selenium爬取网易云音乐排行榜',
                     overview: "This is an article text.Here's an overview of this article",
                     navigation_url: 'https://mp.weixin.qq.com/s/eIoreVGjHz0aXn7jC_FP2w',
-                    image: './images/img1.jpg',
+                    image: './images/Bocchi.png',
                 },
                 {
                     id: '2',

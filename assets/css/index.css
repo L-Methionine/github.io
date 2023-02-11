@@ -3,6 +3,10 @@
     margin: 0;
 }
 
+:root {
+    --box-shandow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+}
+
 body {
     font-family: "Source Code Pro";
 }
@@ -23,7 +27,7 @@ p {
 }
 
 
-.safari {
+.navigation-bar {
     border-radius: 30px ;
     background-color: rgba(252, 248, 248, 0);
     padding-top: 5px;
@@ -39,7 +43,7 @@ p {
     
 }
 
-.safari:hover {
+.navigation-bar:hover {
     content: "";
     background-color: rgba(255, 255, 255, 0.85);
 
@@ -339,11 +343,6 @@ li.navigation-item:nth-child(5) i:after {
     margin: 0 5px;
 }
 
-#section-1 {
-    display: flex;
-    justify-content: center;
-}
-
 body::-webkit-scrollbar {
     width: 5px;
 }
@@ -429,11 +428,15 @@ body::-webkit-scrollbar-thumb {
     color: #fff;
 }
 
+#section-1 {
+    display: flex;
+    justify-content: center;
+    padding: 60px 30px;
+}
+
 .content {
-    width: 50%;
+    width: 60%;
     position: relative;
-    background-color: rgb(251, 250, 250);
-    padding: 60px 40px;
     height: 800px;
     display: flex;
     flex-direction: column;
@@ -443,9 +446,10 @@ body::-webkit-scrollbar-thumb {
 .article-container {
     position: relative;
     background: #fff;
+    box-shadow: var(--box-shandow);
     border-radius: 15px;
     padding: 15px;
-    margin: 10px 0;
+    margin-bottom: 20px;
     height: 250px;
     width: 80%;
     overflow: hidden;
@@ -456,7 +460,7 @@ body::-webkit-scrollbar-thumb {
 }
 
 .article-container:hover {
-    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
 
 }
 
@@ -487,4 +491,73 @@ body::-webkit-scrollbar-thumb {
 .article-img > img {
     height: 100%;
     width: auto;
+}
+
+.sidebar {
+    position: relative;
+    width: 20%;
+}
+
+#profile {
+    position: relative;
+    box-shadow: var(--box-shandow);
+    border-radius: 15px;
+    padding: 15px;
+    margin-bottom: 15px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#avatar {
+    position: relative;
+    margin: 15px;
+}
+
+#avatar > img {
+    position: relative;
+    display: block;
+    height: 100px;
+    width: 100px;
+    border-radius: 50%;
+    margin: 10px;
+    object-fit: cover;
+}
+
+#data-bar {
+    position: relative;
+    display: flex;
+    justify-content: space-between;
+    width: 85%;
+    margin: 10px 0;
+}
+
+#data-bar > * {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#followMe {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80%;
+    height: 25px;
+    background-color: rgb(89, 151, 250);
+    box-shadow: var(--box-shandow);
+    cursor: pointer;
+}
+
+#announcement {
+    position: relative;
+    box-shadow: var(--box-shandow);
+    border-radius: 15px;
+    padding: 20px;
+}
+
+#announcement > * {
+    padding: 5px;
 }
