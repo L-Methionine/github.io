@@ -257,13 +257,15 @@ p {
     zoom: 1;
     display: inline;
     vertical-align: top;
-    float: right;
+
 }
 
 .navigation-list {
     font-size: 0;
     padding-top: 10px;
     padding-bottom: 10px;
+    display: flex;
+    flex-direction: row-reverse;
 }
    
 .navigation-item {
@@ -308,6 +310,7 @@ p {
     width: 100%;
 }
 
+/*
 li.navigation-item:nth-child(1) i:after {
     content: "关于";
     font-style: normal;
@@ -342,6 +345,7 @@ li.navigation-item:nth-child(5) i:after {
     font-weight: 600;
     margin: 0 5px;
 }
+*/
 
 body::-webkit-scrollbar {
     width: 5px;

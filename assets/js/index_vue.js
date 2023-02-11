@@ -3,11 +3,11 @@ const top_vm = new Vue({
     data: function() {
         return {
             navigationList: [
-                {id: 'nav-1', url: '#', icon: 'ion-information-circled'},
-                {id: 'nav-2', url: '#', icon: 'ion-help-circled'},
-                {id: 'nav-3', url: './Calculator/Variance-calculator.html', icon: 'ion-more'},
-                {id: 'nav-4', url: './Basketball.html', icon: 'ion-cube'},
-                {id: 'nav-5', url: '#', icon: 'ion-ios-home'},
+                {id: 'nav-1', title:'关于', url: '#', icon: 'ion-information-circled'},
+                {id: 'nav-2', title:'帮助', url: '#', icon: 'ion-help-circled'},
+                {id: 'nav-3', title:'更多', url: './Calculator/Variance-calculator.html', icon: 'ion-more'},
+                {id: 'nav-4', title:'应用', url: './Basketball.html', icon: 'ion-cube'},
+                {id: 'nav-5', title:'首页', url: '#', icon: 'ion-ios-home'},
             ]
         }
     }

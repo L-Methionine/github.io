@@ -21,6 +21,7 @@
                         <li v-for="navItem in navigationList" :key="navItem.id" class="navigation-item ib">
                             <a :href="navItem.url" class="navigation-link" target="_blank">
                                 <i :class="navItem.icon"></i>
+                                <span>{{navItem.title}}</span>
                             </a>
                         </li>
                         <!--
