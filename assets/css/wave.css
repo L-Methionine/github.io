@@ -1,7 +1,7 @@
 #banner_wave_1 {
     width: auto;
     height: 65px;
-    background: url(https://l-methionine.github.io/github.io/images/wave1.png) repeat-x;
+    background: url(https://l-methionine.github.io/github.io/assets/images/wave1.png) repeat-x;
 
     position: absolute;
     bottom: 0;
@@ -19,7 +19,7 @@
 #banner_wave_2 {
     width: auto;
     height: 80px;
-    background: url(https://l-methionine.github.io/github.io/images/wave2.png) repeat-x;
+    background: url(https://l-methionine.github.io/github.io/assets/images/wave2.png) repeat-x;
 
     position: absolute;
     bottom: 0;
