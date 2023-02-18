@@ -18,36 +18,40 @@
             <header class="navigation-bar">
                 <div class="wrapper">
                     <ul class="navigation-list ul-reset">
+                        <li class="navigation-item ib">
+                            <a href="#" class="navigation-link">
+                                <i class="ion-more"></i>
+                                <span>更多</span>
+                            </a>
+                            <ul class="sub-menu">
+                                <li>
+                                    <a href="./Test/Test.html">
+                                        <i class="ion-ios-paper"></i>
+                                        <span>测试</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="#">
+                                        <i class="ion-ios-book"></i>
+                                        <span>笔记</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="./Pages/Basketball.html" target="_blank">
+                                        <i class=""></i>
+                                        <span>小游戏</span>
+                                    </a>
+                                </li>
+                            </ul>
+                        </li>
                         <li v-for="navItem in navigationList" :key="navItem.id" class="navigation-item ib">
                             <a :href="navItem.url" class="navigation-link" target="_blank">
                                 <i :class="navItem.icon"></i>
                                 <span>{{navItem.title}}</span>
                             </a>
                         </li>
-                        <!--
-                        <li class="navigation-item ib">
-                            <a href="#" class="navigation-link">
-                                <i class="ion-help-circled"></i>
-                            </a>
-                        </li>
-                        <li class="navigation-item ib">
-                            <a href="./Calculator/Variance-calculator.html" class="navigation-link" target="_blank">
-                                <i class="ion-more"></i>
-                            </a>
-                        </li>
-                        <li class="navigation-item ib">
-                            <a href="./Basketball.html" class="navigation-link" target="_blank">
-                                <i class="ion-cube"></i>
-                            </a>
-                        </li>
-                        <li class="navigation-item ib">
-                            <a href="#" class="navigation-link">
-                                <i class="ion-ios-home"></i>
-                            </a>
-                        </li>
-                        -->
                     </ul>
-                    </div>
+                </div>
 
             </header>
 
@@ -126,7 +130,7 @@
                     <div class="sidebar">
                         <div id="profile">
                             <div id="avatar">
-                                <img src="./images/img1.jpg" alt="Error" />
+                                <img src="./assets/images/img1.jpg" alt="Error" />
                                 <p style="text-align: center;">Methionine</p>
                             </div>
                             <div id="data-bar">
@@ -154,13 +158,14 @@
                             <div class="announcement-content">
                                 <p>This is my Blog</p>
                             </div>
+                        </div>
                     </div>
                 </section>
             </div>
 
         </div>
 
-        <script src="./assets/js/vue.min.js"></script>
+        <script src="./lib/vue.min.js"></script>
         <script src="./assets/js/index_vue.js"></script>
         <script src="./assets/js/index.js"></script>
         <script src="./assets/js/scroll.js"></script>

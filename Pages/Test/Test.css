@@ -1,0 +1,36 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#test {
+    position: relative;
+    height: 100vh;
+}
+
+.t2 {
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(145, 144, 144, 0.3);
+}
+
+.filter-glass {
+    position: absolute;
+    top: 0;
+    left: 10%;
+    width: 22%;
+    height: inherit;
+    background: rgba(145, 144, 144, 0.3);
+    backdrop-filter: blur(20px);
+    box-shadow:inset 0 0 6px rgba(255, 255, 255, 0.2);
+    z-index: 5;
+}
+
+.t2 > #video {
+    height: 100%;
+
+}

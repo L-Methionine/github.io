@@ -58,7 +58,7 @@ const root = new Vue({
         }
     },
     computed: {
-         Sample_Standard_Deviation: {
+        Sample_Standard_Deviation: {
             get() {
                 sum = 0;
                 for(i = 0; i < this.data_num.length; i++){
