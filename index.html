@@ -18,37 +18,19 @@
             <header class="navigation-bar">
                 <div class="wrapper">
                     <ul class="navigation-list ul-reset">
-                        <li class="navigation-item ib">
-                            <a href="#" class="navigation-link">
-                                <i class="ion-more"></i>
-                                <span>更多</span>
-                            </a>
-                            <ul class="sub-menu">
-                                <li>
-                                    <a href="./Pages/Test/Test-2.html">
-                                        <i class="ion-ios-paper"></i>
-                                        <span>测试</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="#">
-                                        <i class="ion-ios-book"></i>
-                                        <span>笔记</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="./Pages/Basketball.html" target="_blank">
-                                        <i class=""></i>
-                                        <span>小游戏</span>
-                                    </a>
-                                </li>
-                            </ul>
-                        </li>
-                        <li v-for="navItem in navigationList" :key="navItem.id" class="navigation-item ib">
-                            <a :href="navItem.url" class="navigation-link" target="_blank">
+                        <li v-for="(navItem,index) in navigationList" :key="navItem.id" class="navigation-item ib">
+                            <a :href="navItem.url" class="navigation-link" :target="navItem.url==='#'?'_self':'_blank'">
                                 <i :class="navItem.icon"></i>
                                 <span>{{navItem.title}}</span>
                             </a>
+                            <ul v-if="navItem.subMenu" class="sub-menu">
+                                <li v-for="subItem in navItem.subMenu">
+                                    <a :href="subItem.url" :target="subItem.url==='#'?'_self':'_blank'">
+                                        <i :class="subItem.icon"></i>
+                                        <span>{{subItem.title}}</span>
+                                    </a>
+                                </li>
+                            </ul>
                         </li>
                     </ul>
                 </div>
@@ -130,7 +112,7 @@
                     <div class="sidebar">
                         <div id="profile">
                             <div id="avatar">
-                                <img src="./assets/images/img1.jpg" alt="Error" />
+                                <img :src="Avatar" alt="Error" />
                                 <p style="text-align: center;">Methionine</p>
                             </div>
                             <div id="data-bar">
@@ -156,7 +138,7 @@
                                 <h3>Announcement</h3>
                             </div>
                             <div class="announcement-content">
-                                <p>This is my Blog</p>
+                                <p>{{Announcement}}</p>
                             </div>
                         </div>
                     </div>

@@ -3,8 +3,13 @@ const top_vm = new Vue({
     data: function() {
         return {
             navigationList: [
-                {id: 'nav-1', title:'关于', url: '#', icon: 'ion-information-circled'},
-                {id: 'nav-2', title:'帮助', url: '#', icon: 'ion-help-circled'},
+                {id: 'nav-1', title:'更多', url: '#', icon: 'ion-more', subMenu: [
+                    {id: 'nav-1-1', title:'测试', url: './Pages/Test/Test-2.html', icon: 'ion-ios-paper'},
+                    {id: 'nav-1-2', title:'笔记', url: '#', icon: 'ion-ios-book'},
+                    {id: 'nav-1-3', title:'小游戏', url: './Pages/Basketball.html', icon: ''}
+                ]},
+                {id: 'nav-2', title:'关于', url: '#', icon: 'ion-information-circled'},
+                {id: 'nav-3', title:'帮助', url: '#', icon: 'ion-help-circled'},
                 {id: 'nav-4', title:'应用', url: './Pages/Calculator/Variance-calculator.html', icon: 'ion-cube'},
                 {id: 'nav-5', title:'首页', url: '#', icon: 'ion-ios-home'},
             ]
@@ -43,6 +48,8 @@ const section1 = new Vue({
     el: '#section-1',
     data: function() {
         return {
+            Avatar: './assets/images/img1.jpg',
+            Announcement: 'This is my Blog',
             ArticleList: [
                 {
                     id: '0', 
